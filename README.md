@@ -1,7 +1,7 @@
 # ATIVIDADES ESCOLA ACME API
 Situação de Aprendizagem - Back-End (Node.JS, JavaSript, VsCode, ORM Prisma, Insomnia)
 ## Contextualização
-A ESCOLA ACME tem atuado em nossa cidade com ótimo atendimento e confiabilidade, é nossa aluno e necessita de um sistema Web para registro das atividades e notas de seus alunos.<br>O P.O. após uma visita ao aluno elaborou o DER e UML DC(Diagrama de Classes) a seguir e elencou os requisitos funcionais.<br>
+A ESCOLA ACME tem atuado em nossa cidade com ótimo atendimento e confiabilidade, é nossa cliente e necessita de um sistema Web para registro das atividades e notas de seus alunos.<br>O P.O. após uma visita ao aluno elaborou o DER e UML DC(Diagrama de Classes) a seguir e elencou os requisitos funcionais.<br>
 ![DER e DC](./docs/der-dc.png)
 ## Desafio
 Desenvolver as funcionalidades conforme requisitos
