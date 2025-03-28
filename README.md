@@ -24,7 +24,7 @@ Desenvolver as funcionalidades conforme requisitos
 - [CT003] Cadastre, altere e exclua um aluno.
 - [CT004] Cadastre uma atividade para cada aluno.
     - [CT004.1] Pelo menos um aluno deve ter duas ou mais atividades cadastradas.
-- [CT003] Cadastre, altere e exclua uma atividade.
+- [CT005] Cadastre, altere e exclua uma atividade.
 
 ## Tecnologias
 
