@@ -24,7 +24,7 @@ const readOne = async (req, res) => {
         },
         include: {
             atividades: true,
-            telefone: true
+            telefones: true
         }
     });
     res.json(aluno);

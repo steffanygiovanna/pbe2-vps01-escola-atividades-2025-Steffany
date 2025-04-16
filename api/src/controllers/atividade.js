@@ -20,7 +20,7 @@ const read = async (req, res) => {
 const readOne = async (req, res) => {
     const atividade = await prisma.atividade.findFirst({
         where: {
-            ra: Number(req.params.id)
+            id: Number(req.params.id)
         },
         include: {
             alunos: true
@@ -31,23 +31,31 @@ const readOne = async (req, res) => {
 
 const update = async (req, res) => {
     try {
-        const atividade = await prisma.atividade.update({
-            data: req.body,
-            where: {
-                ra: Number(req.params.id)
-            }
-        });
-        res.status(202).json(atividade).end();
+      let { nota, peso } = req.body;
+  
+      if (nota !== undefined && peso !== undefined) {
+        req.body.parcial = (nota * peso) / 10;
+      }
+  
+      const atividade = await prisma.atividade.update({
+        where: {
+          id: Number(req.params.id)
+        },
+        data: req.body
+      });
+  
+      res.status(202).json(atividade).end();
     } catch (e) {
-        res.status(400).json(e).end();
+      res.status(400).json({ error: e.message }).end();
     }
-}
+  };
+  
 
 const remove = async (req, res) => {
     try {
         const atividade = await prisma.atividade.delete({
             where: {
-                ra: Number(req.params.id)
+                id: Number(req.params.id)
             }
         });
         res.status(204).json(atividade).end();

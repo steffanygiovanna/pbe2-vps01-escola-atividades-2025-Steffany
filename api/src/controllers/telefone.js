@@ -20,7 +20,7 @@ const read = async (req, res) => {
 const readOne = async (req, res) => {
     const telefone = await prisma.telefone.findFirst({
         where: {
-            ra: Number(req.params.id)
+            id: Number(req.params.id)
         },
         include: {
             atividades: true,
@@ -35,7 +35,7 @@ const update = async (req, res) => {
         const telefone = await prisma.telefone.update({
             data: req.body,
             where: {
-                ra: Number(req.params.id)
+                id: Number(req.params.id)
             }
         });
         res.status(202).json(telefone).end();
@@ -48,7 +48,7 @@ const remove = async (req, res) => {
     try {
         const telefone = await prisma.telefone.delete({
             where: {
-                ra: Number(req.params.id)
+                id: Number(req.params.id)
             }
         });
         res.status(204).json(telefone).end();
