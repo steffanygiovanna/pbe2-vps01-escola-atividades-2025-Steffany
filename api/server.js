@@ -9,5 +9,5 @@ app.use(express.json());
 app.use(routes);
 
 app.listen(5000, () => {
-  console.log('API executando em http://localhost:3306');
+  console.log('API executando em http://localhost:5000');
 });
