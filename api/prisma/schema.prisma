@@ -8,7 +8,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Aluno{
   ra Int @id @default(autoincrement())
   nome String @db.VarChar(100)
